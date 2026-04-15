@@ -26,13 +26,5 @@
         "brand"
       ]
     }
-    {
-  "name": "swolvy",
-  "source": "./plugins/swolvy",
-  "description": "Publish HTML to swolvy.com and get a shareable public URL — no MCP, just curl.",
-  "version": "0.1.0",
-  "category": "publishing",
-  "tags": ["html", "hosting", "publish", "share", "swolvy"]
-}
   ]
 }
