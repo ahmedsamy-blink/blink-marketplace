@@ -1,7 +1,7 @@
 {
   "name": "blink-presentation",
-  "version": "0.3.0",
-  "description": "Blink's official presentation and report style — creates on-brand HTML decks, reports, PRDs, BRDs, release notes, event recaps, and any long-form scroll deliverable with the Blink logo, coral-on-dark theme, hamburger side nav, scroll progress bar, micro-animations, and print-ready styles.",
+  "version": "0.4.0",
+  "description": "Blink's official on-brand style for HTML deliverables \u2014 presentations, reports, PRDs, BRDs, business docs, release notes, event recaps, and any long-form scroll-based shareable. Runs a mandatory intake flow (intake, study, style, follow-ups, four leverage questions, build) before generating. Enforces Blink brand (dark theme, coral accents, Inter, Blink logo, hamburger side nav, scroll progress bar, micro-animations, print styles) with hard alignment rules on donut charts, card bottom-alignment, and calibrated screen-share sizing.",
   "author": {
     "name": "Blink"
   },

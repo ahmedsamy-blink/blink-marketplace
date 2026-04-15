@@ -1,0 +1,63 @@
+name: Validate marketplace
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          set -e
+          echo "Checking marketplace.json…"
+          python3 -c "import json; json.load(open('.claude-plugin/marketplace.json'))"
+
+          echo "Checking every plugin.json…"
+          for f in plugins/*/.claude-plugin/plugin.json; do
+            echo "  $f"
+            python3 -c "import json,sys; d=json.load(open('$f')); \
+              assert 'name' in d, 'missing name'; \
+              assert 'version' in d, 'missing version'; \
+              assert 'description' in d, 'missing description'"
+          done
+
+      - name: Check marketplace entries match plugin folders
+        run: |
+          python3 <<'PY'
+          import json, os, sys
+          m = json.load(open('.claude-plugin/marketplace.json'))
+          errors = []
+          registered = {p['name']: p for p in m.get('plugins', [])}
+
+          # Every registered plugin must have a folder with a plugin.json
+          for name, entry in registered.items():
+              src = entry.get('source', f'./plugins/{name}')
+              pj = os.path.join(src, '.claude-plugin', 'plugin.json')
+              if not os.path.isfile(pj):
+                  errors.append(f"  {name}: missing {pj}")
+                  continue
+              pd = json.load(open(pj))
+              if pd.get('version') != entry.get('version'):
+                  errors.append(
+                      f"  {name}: version mismatch — marketplace={entry.get('version')} "
+                      f"plugin.json={pd.get('version')}"
+                  )
+
+          # Every plugin folder must be registered in marketplace.json
+          for d in sorted(os.listdir('plugins')):
+              folder = os.path.join('plugins', d)
+              if not os.path.isdir(folder): continue
+              if d not in registered:
+                  errors.append(f"  {d}: folder exists but not in marketplace.json")
+
+          if errors:
+              print("Validation failed:")
+              for e in errors: print(e)
+              sys.exit(1)
+          print("OK — marketplace and plugins are in sync.")
+          PY

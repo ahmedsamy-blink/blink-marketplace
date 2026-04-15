@@ -1,23 +1,29 @@
 {
   "name": "blink-marketplace",
   "owner": {
-    "name": "Blink"
+    "name": "Blink",
+    "url": "https://github.com/ahmedsamy-blink"
+  },
+  "metadata": {
+    "description": "Blink's internal plugin marketplace — on-brand HTML deliverables, demo setup helpers, and team productivity plugins.",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "blink-presentation",
       "source": "./plugins/blink-presentation",
-      "description": "Blink's official presentation and report style — creates on-brand HTML decks, reports, PRDs, BRDs, release notes, event recaps, and any long-form scroll deliverable.",
-      "version": "0.3.0",
-      "author": {
-        "name": "Blink"
-      },
-      "keywords": [
+      "description": "Blink's official on-brand HTML deliverable skill — presentations, reports, PRDs, BRDs, business docs, release notes. Runs a mandatory intake flow (intake, study, style, follow-ups, four leverage questions, build) and enforces Blink brand plus hard alignment rules.",
+      "version": "0.4.0",
+      "category": "design",
+      "tags": [
         "blink",
         "presentation",
         "report",
-        "brand",
-        "html"
+        "prd",
+        "brd",
+        "release-notes",
+        "html",
+        "brand"
       ]
     }
   ]

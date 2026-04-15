@@ -231,7 +231,7 @@
     margin-bottom: 20px;
   }
   .section-title {
-    font-size: clamp(52px, 6vw, 88px);
+    font-size: clamp(42px, 4.8vw, 70px);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1.5px;
@@ -340,7 +340,7 @@
     margin-bottom: 28px;
   }
   .hero h1 {
-    font-size: clamp(72px, 9vw, 130px);
+    font-size: clamp(56px, 7.2vw, 104px);
     font-weight: 900;
     line-height: 1.02;
     color: var(--coral);
@@ -413,7 +413,9 @@
   .card {
     background: var(--dark-card);
     border-radius: 18px;
-    padding: 48px;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba(232, 132, 92, 0.1);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
@@ -479,7 +481,7 @@
     border-top: 2px solid rgba(232, 132, 92, 0.2);
   }
   .stat-value {
-    font-size: clamp(60px, 7vw, 96px);
+    font-size: clamp(48px, 5.6vw, 77px);
     font-weight: 900;
     color: var(--coral);
     line-height: 1;
@@ -579,7 +581,7 @@
     min-height: 100vh;
   }
   .closing h2 {
-    font-size: clamp(60px, 7vw, 100px);
+    font-size: clamp(48px, 5.6vw, 80px);
     font-weight: 900;
     color: var(--coral);
     letter-spacing: -2px;
@@ -631,6 +633,10 @@
     .hero h1 { font-size: 56px; }
     .section-title { font-size: 42px; }
   }
+
+  .mini-chart { margin-top: auto; padding-top: 20px; height: 56px; display: block; width: 100%; align-self: stretch; }
+  .donut-shell { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .donut-caption { font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 600; text-align: center; }
 </style>
 </head>
 <body>
