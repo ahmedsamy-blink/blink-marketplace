@@ -1,0 +1,21 @@
+{
+  "name": "blink-presentation",
+  "version": "0.3.0",
+  "description": "Blink's official presentation and report style — creates on-brand HTML decks, reports, PRDs, BRDs, release notes, event recaps, and any long-form scroll deliverable with the Blink logo, coral-on-dark theme, hamburger side nav, scroll progress bar, micro-animations, and print-ready styles.",
+  "author": {
+    "name": "Blink"
+  },
+  "keywords": [
+    "blink",
+    "presentation",
+    "report",
+    "prd",
+    "brd",
+    "release-notes",
+    "event-report",
+    "after-action",
+    "brand",
+    "style",
+    "html"
+  ]
+}

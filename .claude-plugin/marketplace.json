@@ -1,0 +1,24 @@
+{
+  "name": "blink-marketplace",
+  "owner": {
+    "name": "Blink"
+  },
+  "plugins": [
+    {
+      "name": "blink-presentation",
+      "source": "./plugins/blink-presentation",
+      "description": "Blink's official presentation and report style — creates on-brand HTML decks, reports, PRDs, BRDs, release notes, event recaps, and any long-form scroll deliverable.",
+      "version": "0.3.0",
+      "author": {
+        "name": "Blink"
+      },
+      "keywords": [
+        "blink",
+        "presentation",
+        "report",
+        "brand",
+        "html"
+      ]
+    }
+  ]
+}

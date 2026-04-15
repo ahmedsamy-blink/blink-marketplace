@@ -1,0 +1,4 @@
+.DS_Store
+.mcpb-cache/
+node_modules/
+*.log
