@@ -23,7 +23,6 @@ In Cowork: open the plugin manager and paste the GitHub URL.
 | Plugin | Version | Description |
 | --- | --- | --- |
 | [blink-presentation](./plugins/blink-presentation) | 0.4.0 | On-brand HTML deliverables — presentations, reports, PRDs, BRDs, release notes. Runs a 6-step intake flow and enforces hard brand + alignment rules. |
-| [swolvy](./plugins/swolvy) | 0.1.0 | Publish HTML to swolvy.com and get a shareable public URL. No MCP, no auth — just `curl`. |
 
 ## Adding a new plugin
 
