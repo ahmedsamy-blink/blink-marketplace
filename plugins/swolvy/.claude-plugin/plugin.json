@@ -1,0 +1,9 @@
+{
+  "name": "swolvy",
+  "version": "0.1.0",
+  "description": "Publish HTML to swolvy.com and get a shareable public URL — no MCP, just curl.",
+  "author": {
+    "name": "Ahmed"
+  },
+  "keywords": ["swolvy", "html", "publish", "hosting", "share"]
+}
